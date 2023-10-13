@@ -170,10 +170,7 @@ p{
     overflow: hidden;
     text-align: left;
 }
-.imagenes{
-    height: 200px;
-    width: 150px;
-}
+
 .carrusel-elemento {
     float: left;
     width: 25%;
