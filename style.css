@@ -162,8 +162,8 @@ p{
     -ms-transition: all 0.75s ease;
     -o-transition: all 0.75s ease;
     transition: all 0.75s ease;
-    height: 500px;
-    width: 300%;
+    height: 50%;
+    width: 50%;
 }
 #carrusel-contenido {
     margin: 0 auto;
@@ -171,8 +171,8 @@ p{
     text-align: left;
 }
 .imagenes{
-    height: 500px;
-    width: 100%;
+    height: 50%;
+    width: 50%;
 }
 .carrusel-elemento {
     float: left;
