@@ -171,12 +171,12 @@ p{
     text-align: left;
 }
 .imagenes{
-    height: 10px;
-    width: 10px;
+    height: 200px;
+    width: 150px;
 }
 .carrusel-elemento {
     float: left;
-    width: 33.333%;
+    width: 25%;
 }
 @-moz-keyframes automatizacion {
     0% {
