@@ -1,69 +1,57 @@
+/* Estilos generales */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #FFCCCB, #FFF5E1); /* Fondo delicado y femenino */
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-nav {
-    background-color: black;
-    color: white;
-    transition: 1s ease;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.9s ease;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif;
-}
-
-
-footer {
-    background-color: #FF00FF;
-    color: #fff;
-    padding: 10px 0;
-    margin: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    background: linear-gradient(to bottom, #FFCCCB, #FFF5E1);
     font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    align-items: center; 
+    text-align: center;  
 }
 
-footer img {
-    margin: 0;
-}
-#logo {
-    width: 50px; 
-    margin-right: 10px; 
-    float: left;  
-}
-
+/* Encabezado */
 header {
+    background: #FF00FF;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 20px;
 }
+
+#logo {
+    width: 50px;
+    margin-right: 10px;
+}
+
 h1 {
-    font-family: 'Pacifico', cursive;
     color: white;
     margin: 0;
-    background: #333;
-    padding: 20px;
-    text-align: center;
+    font-size: 2rem;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #FF00FF;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 20px;
 }
 
@@ -72,163 +60,117 @@ nav ul li:last-child {
 }
 
 nav ul li a {
-    color: #eae6ca;
+    color: white;
     text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    border: 1px solid #FF00FF;
+    transition: background-color 0.3s, color 0.3s;  
 }
 
 nav ul li a:hover {
-    background-color: #FF00FF;
-    color: #fff;
-    margin: 10;
+    background-color: white;  
+    color: #FF00FF;  
 }
 
 
-
-
-
-.left-column {
-    flex: 1;
-    padding: 20px;
-    text-align: left;
-}
-
-iframe {
-    flex: 1;
-    margin: 0 20px;
-}
-
-.right-column {
-    flex: 1;
-    padding: 20px;
-    text-align: right;
-}
-
-.btn-container {
-    display: flex;
-    justify-content: center;
-}
-
-.btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-.titulo-centrado {
-    text-align: center;
-}
-
+/* Contenido principal */
 .columnas {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-}
-.titulo-centro {
-    font-size: 1.5rem;
-    text-align: center; 
+    justify-content: center;
 }
 
 .image-text {
-    width: 100%;
-    max-width: 300px; 
-    padding: 20px;
+    width: 300px;
+    margin: 20px;
     text-align: center;
-    margin: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #FF00FF;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+}
+
+/* Pie de página */
+footer {
+    background: #FF00FF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    text-align: center;
-}
-.image-text img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    .image-text {
-        max-width: 90%;
-    }
-}
-
-.columnas{
-    display: flex;
-    color: #AF7AC5;
-    font-size: 20px;
-    background: linear-gradient(to bottom, #AF7AC5, white);
-    transition: 2s ease;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    
-}
-h3{
-    font-family: 'Pacifico', cursive;
-    color: white;
-    margin: 0;
-    background: #333;
-    padding: 20px;
-    text-align: center; 
-}
-.imagen-comun {
-    width: 200px;  
-    height: 150px;  
-}
-p{
-    display:inline-flexbox;
-    grid-template-columns: repeat(3, 1fr);  
-    gap: 20px;  
-    font-size: 16px;
 }
 
+.social {
+    display: flex;
+}
+
+.social a {
+    margin: 10px;
+}
+/* Estilos para el contenedor */
 .container {
-    max-width: 25%;
+    text-align: center;
+    max-width: 100%;
     overflow: hidden;
+}
+
+/* Carrusel responsive */
+.slider-container {
+    position: fixed;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra exactamente en el centro de la pantalla */
 }
 
 .slider {
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    overflow: hidden;
     width: 100%;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    max-width: 100%; /* Ancho máximo del carrusel */
 }
 
-.slider li {
-    flex: 0 0 100%; /* Cada imagen ocupa el 20% del ancho del contenedor */
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
     text-align: center;
+    display: none;
 }
 
-.slider img {
-    max-width: 30%;
+.slide img {
+    max-width: 100%; /* Ancho máximo de las imágenes */
     height: auto;
+    display: block;
+    margin: 0 auto; /* Centra horizontalmente la imagen */
 }
 
+/* Números del carrusel */
 .menu {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .menu li {
-    margin: 0 10px; /* Espaciado entre los enlaces del menú */
+    margin: 0 10px;
 }
 
 .menu a {
     text-decoration: none;
+}
+
+/* Estilos para mostrar el primer slide */
+#slide1 {
+    display: block;
+}
+
+/* Cambiar el slide al hacer clic en los números del menú */
+.menu li a {
+    cursor: pointer;
+}
+
+.menu li a:hover {
+    color: #FF00FF; /* Cambiar color al pasar el mouse */
 }
