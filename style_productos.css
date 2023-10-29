@@ -61,3 +61,31 @@ a {
     width: 150px; /* Ancho deseado */
     height: 150px; /* Alto deseado */
 }
+.btn{
+    font-family: serif; /* Fuente tipo imprenta */
+    margin: 10px;
+  
+  }
+  footer {
+    background: #FF00FF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; /* Alinea las cajas horizontalmente */
+  }
+  
+  .footer-box {
+    font-family: serif; /* Fuente tipo imprenta */
+    margin: 10px;
+  }
+  
+  /* Estilos para la sección de redes sociales */
+  .redes-sociales {
+    text-align: center;
+  }
+  
+  .redes-sociales a {
+    margin: 10px;
+  }
+  
