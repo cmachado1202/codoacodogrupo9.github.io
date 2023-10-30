@@ -2,13 +2,30 @@
 
 const slides = document.querySelectorAll('.slide');
 const menuItems = document.querySelectorAll('.menu li a');
+let currentSlideIndex = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => (slide.style.display = 'none'));
+    slides[index].style.display = 'block';
+}
+
+function nextSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+    showSlide(currentSlideIndex);
+}
+
+// Cambiar automáticamente a la siguiente diapositiva cada 5 segundos (ajusta el tiempo según tus necesidades)
+setInterval(nextSlide, 3000);
 
 menuItems.forEach((menuItem, index) => {
     menuItem.addEventListener('click', () => {
-        slides.forEach(slide => (slide.style.display = 'none'));
-        slides[index].style.display = 'block';
+        showSlide(index);
+        currentSlideIndex = index;
     });
-})
+});
+
+showSlide(currentSlideIndex); // Mostrar la primera diapositiva al cargar la página
+
 
  // Funcion demostrar funcionamiento de api
   
