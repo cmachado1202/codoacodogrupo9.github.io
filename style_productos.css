@@ -61,11 +61,28 @@ a {
     width: 150px; /* Ancho deseado */
     height: 150px; /* Alto deseado */
 }
-.btn{
-    font-family: serif; /* Fuente tipo imprenta */
-    margin: 10px;
-  
-  }
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.btn {
+  background-color: #FF00FF;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #FF00FF;
+}
+
   footer {
     background: #FF00FF;
     color: white;

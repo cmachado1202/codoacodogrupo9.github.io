@@ -1,36 +1,34 @@
-// Espera a que el documento esté listo
-document.addEventListener("DOMContentLoaded", function () {
-    // Obtiene los slides y el contenedor del carrusel
-    const slides = document.querySelectorAll(".slide");
-    const sliderContainer = document.querySelector(".slider-container");
+//carousel
 
-    // Inicializa el índice del slide actual y el intervalo para el carrusel automático
-    let currentSlide = 0;
-    let interval;
+const slides = document.querySelectorAll('.slide');
+const menuItems = document.querySelectorAll('.menu li a');
 
-    // Función para cambiar al siguiente slide
-    function nextSlide() {
-        slides[currentSlide].style.display = "none";
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].style.display = "block";
-    }
+menuItems.forEach((menuItem, index) => {
+    menuItem.addEventListener('click', () => {
+        slides.forEach(slide => (slide.style.display = 'none'));
+        slides[index].style.display = 'block';
+    });
+})
 
-    // Iniciar el carrusel automáticamente
-    function startAutoSlide() {
-        interval = setInterval(nextSlide, 3000); // Cambia de slide cada 3 segundos (3000 ms)
-    }
+ // Funcion demostrar funcionamiento de api
+  
+ function fetchAndUpdateUser(userBoxId) {
+    fetch('https://randomuser.me/api/')
+        .then(response => response.json())
+        .then(data => {
+            // Extract the user data
+            const user = data.results[0];
 
-    // Detener el carrusel automáticamente
-    function stopAutoSlide() {
-        clearInterval(interval);
-    }
+            // Update the HTML elements in the specified user box
+            const userBox = document.getElementById(userBoxId);
+            userBox.querySelector('.titulo-centro').textContent = `${user.name.first} ${user.name.last}`;
+            userBox.querySelector('img').src = user.picture.large;
+        })
+        .catch(error => console.error('Error fetching data: ' + error));
+}
 
-    // Iniciar el carrusel automáticamente al cargar la página
-    startAutoSlide();
+// Loop
 
-    // Detener el carrusel cuando el cursor pasa sobre el contenedor
-    sliderContainer.addEventListener("mouseover", stopAutoSlide);
-
-    // Reanudar el carrusel cuando el cursor sale del contenedor
-    sliderContainer.addEventListener("mouseout", startAutoSlide);
-});
+for (let i = 1; i <= 3; i++) {
+    fetchAndUpdateUser(`user-box-${i}`);
+}

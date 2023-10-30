@@ -1,113 +1,131 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=MuseoModerno&display=swap');
+
+*{
+    font-family:'MuseoModerno', sans-serif;
+}
+
+
 /* Estilos generales */
 body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
-  margin: 0;
-  background: linear-gradient(to bottom, #FFCCCB, #FFF5E1);
-  font-family: 'Pacifico', cursive;
-  font-weight: bold;
-  font-size: 20px;
-  align-items: center; 
-  text-align: center;  
+    /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto; */
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #FFCCCB, #FFF5E1);
+    font-family: 'Pacifico', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    /* align-items: center; 
+    text-align: center;   */
+}
+
+.header{
+    display:flex;
+    justify-content: space-around;
+    background: #FF00FF;
 }
 
 /* Encabezado */
 header {
-  background: #FF00FF;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+    background: #FF00FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 #logo {
-  width: 50px;
-  margin-right: 10px;
+    width: 50px;
+    margin-right: 10px;
 }
 
 h1 {
-  color: white;
-  margin: 0;
-  font-size: 2rem;
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
 }
 
 /* Barra de navegación */
 nav {
-  background-color: #FF00FF;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background-color: #FF00FF;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 nav ul li {
-  margin-right: 20px;
+    margin-right: 20px;
 }
 
 nav ul li:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;  
+    color: white;
+    text-decoration: none;
+    transition: background-color 1.5s, color 0.3s;  
 }
 
 nav ul li a:hover {
-  background-color: white;  
-  color: #FF00FF;  
+    background-color: white;  
+    color: #FF00FF;  
+    width: 100%;
 }
-.btn{
-  font-family: serif; /* Fuente tipo imprenta */
-  margin: 10px;
 
-}
 
 /* Contenido principal */
 .columnas {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.comentarios {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 
-/* Estilos para las cajas de texto */
 .image-text {
-  width: 300px;
-  margin: 20px;
-  text-align: center;
-  border: 1px solid #f807f8;
-  padding: 20px;
-  border-radius: 10px;
-  background: white;
-  margin-top: 50px; /* Ajusta el valor según sea necesario */
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid #FF00FF;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
 }
 
-.contenido {
-color: #dac5e4;
-font-size: 20px;
-background: linear-gradient(to bottom, #310246, rgb(218, 147, 228));
-transition: 2s ease;
-justify-content: center;
-align-items: center;
-text-align: center;
-margin: 20px auto;
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Geneva, Tahoma, sans-serif;
-font-weight: bold;
+.image-text user-box  {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid #FF00FF;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;;
 }
-/* Estilos para el footer */
+
+
+/* Pie de página */
+
 footer {
   background: #FF00FF;
   color: white;
@@ -131,104 +149,259 @@ footer {
   margin: 10px;
 }
 
+
 /* Estilos para el contenedor */
 .container {
-  flex-wrap: wrap;
+    text-align: center;
+    max-width: 100;
+    overflow: hidden;
+}
+
+.formycarousel{
+    /* background-image: linear-gradient(to bottom, #ff00ff, white );     */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin-left: 80px;
+    margin-right: 80px;
+
+}
+
+/* label{
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+
+input{
+    color: black;
+    background-color: lightblue;
+}
+
+button{
+    font-weight: bolder;
+    width: 95px;
+    height: 30px;
+    border-radius: 30px;
+    margin-bottom: 0;
+}
+
+textarea{
+    color: black;
+    border: 2px solid black;
+    background-color: lightblue;
+}
+.btn-container {
+  display: flex;
   justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.btn {
+  background-color: #FF00FF;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #FF00FF;
+}
+.contenido img {
+  width: 150px; /* Ancho deseado */
+  height: 150px; /* Alto deseado */
+}
+
+.form{
+    
+    border-radius: 10px;
+    background:transparent;
+    border: 4px solid white;
+    height: 400px;
+    width: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:5px;
+    justify-items: center;
+    align-items: center;
+    color: black;
+    transition: border 3s ease;
+    margin-top: 10px;
+}
+
+.form-nombre{
+    margin-top:0;
+    
+}
+
+.form-nombre>input{
+    background-color: white;
+}
+
+.form-contacto{
+    margin:0;
+}
+.form-contacto>input, textarea{
+    background-color: white;
+}
+
+.form:hover{
+    border: 6px solid palevioletred;
+}
+
+h3{
+    text-align: center;
+    font-size: 15px;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  max-width: 100%;
-  overflow: hidden;
 }
 
 /* Carrusel responsive */
 .slider-container {
-  flex-wrap: wrap;
-  justify-content: center;
-  position: relative;
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 10px;
-  
-  z-index: 1; /* Asegura que el carrusel esté en la capa superior */
+    position: fixed;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra exactamente en el centro de la pantalla */
 }
 
-
 .slider {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  overflow: hidden;
-  scroll-snap-type: x mandatory;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    max-width: 100%; /* Ancho máximo del carrusel */
 }
 
 .slide {
-  flex-wrap: wrap;
-  justify-content: center;
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  text-align: center;
-  display: none;
-  width: 100%;
-  max-width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    text-align: center;
+    display: none;
 }
 
 .slide img {
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+    /* height: 300px;
+    width: 300px; */
+    display: block;
+    margin: 0 auto; /* Centra horizontalmente la imagen */
+}
+
+.slide>img{
+    height: 300px;
+    width: 300px;
 }
 
 /* Números del carrusel */
 .menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu li {
-  margin: 0 10px;
+    margin: 0 10px;
 }
 
 .menu a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
+/* Estilos para mostrar el primer slide */
 #slide1 {
-  display: block;
+    display: block;
 }
 
+/* Cambiar el slide al hacer clic en los números del menú */
 .menu li a {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .menu li a:hover {
-  color: #FF00FF;
+    color: #FF00FF; /* Cambiar color al pasar el mouse */
 }
 
-@media (max-width: 768px) {
-  .slider-container {
-    max-width: 320px;
+
+/* responsividad */
+
+@media (max-width: 890px) {
+  /* Estilos generales para pantallas de ancho máximo de 890px */
+  body {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "formycarou"
+      "columnas"
+      "comentarios"
+      "footer";
   }
 
-  .slide {
-    width: 320px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .slider-container {
-    max-width: 768px;
-    padding: 5px;
+  .header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
-  .slide {
-    width: 768px;
+  nav {
+    margin-bottom: 20px;
+  }
+
+  nav > ul {
+    display: grid;
+    grid-template-columns: 100vw;
+  }
+
+  nav > ul > li {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav > ul > li > a {
+    text-align: center;
+  }
+
+  .form {
+    grid-area: form;
+  }
+
+  .container {
+    grid-area: carousel;
+  }
+
+  .container > .slider > .slide > img {
+    border: 4px violet solid;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .formycarousel {
+    grid-area: formycarou;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "form"
+      "carousel";
+    justify-content: center;
+  }
+
+  .columnas {
+    grid-area: columnas;
+    margin: auto;
+  }
+
+  .comentarios {
+    grid-area: comentarios;
   }
 }
