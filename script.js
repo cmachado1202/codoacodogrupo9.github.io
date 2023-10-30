@@ -14,7 +14,7 @@ function nextSlide() {
     showSlide(currentSlideIndex);
 }
 
-// Cambiar automáticamente a la siguiente diapositiva cada 5 segundos (ajusta el tiempo según tus necesidades)
+// Cambiar automáticamente a la siguiente diapositiva cada 3 segundos 
 setInterval(nextSlide, 3000);
 
 menuItems.forEach((menuItem, index) => {
